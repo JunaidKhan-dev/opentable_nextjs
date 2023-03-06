@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { Inter } from "@next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -8,67 +10,67 @@ export default function Home(Props: any) {
       <main className="max-w-screen-2xl m-auto bg-white">
         {/* NAVBAR */}
         <nav className="bg-white p-2 flex justify-between">
-          <a href="" className="font-bold text-gray-700 text-2xl">
-            OpenTable
-          </a>
+          <Link href="/" className="font-bold text-gray-700 text-2xl">
+            OpenTable{" "}
+          </Link>
           <div>
             <div className="flex">
               <button className="bg-blue-400 text-white border p-1 px-4 rounded mr-3">
-                Signin
+                Sign in
               </button>
-              <button className="border p-1 px-4 rounded">Signup</button>
+              <button className="border p-1 px-4 rounded">Sign up</button>
             </div>
           </div>
         </nav>
-        <header className="h-96 overflow-hidden">
-          <div className="bg-center bg-gradient-to-r from-[#0f1f46] to-[#5f6984] h-full flex justify-center items-center">
-            <h1 className="text-7xl text-white capitalize text-shadow text-center">
-              Milestone Fast Food (LONDON)
-            </h1>
-          </div>
-        </header>
-        {/* description area */}
-        <section className="flex m-auto justify-between w-2/3 items-start 0 -mt-11">
-          <div className="bg-white w-[70%] rounded p-3 shadow">
-            {/* restaurant navbar */}
-            <nav className="text-reg flex border-b pb-2">
-              <a href="" className="mr-7">
-                Overview
-              </a>
-              <a href="" className="mr-7">
-                Menu
-              </a>
-            </nav>
-            {/* restaurant navbar */}
-            {/* title */}
-            <div className="mt-4 border-b pb-6">
-              <h1 className="font-bold text-6xl">Milestone Fast Food</h1>
-            </div>
-            {/* title */}
-            {/* Rating */}
-            <div className="flex items-end">
-              <div className="rating mt-2 flex items-center">
-                <p>****</p>
-                <p className="text-reg ml-3">4.8</p>
+        {/* NAVBAR */}
+        <main>
+          {/* HEADER */}
+          <div className="h-64 bg-gradient-to-r from-[#0f1f47] to-[#5f6984] p-2">
+            <div className="text-center mt-10">
+              <h1 className="text-white text-5xl font-bold mb-2">
+                Find your table for any occasion
+              </h1>
+              {/* SEARCH BAR */}
+              <div className="text-left text-lg py-3 m-auto flex justify-center">
+                <input
+                  className="rounded  mr-3 p-2 w-[450px]"
+                  type="text"
+                  placeholder="State, city or town"
+                />
+                <button className="rounded bg-red-600 px-9 py-2 text-white">
+                  Let's go
+                </button>
               </div>
-              <div>
-                <p className="text-reg ml-4">600 Reviews</p>
+              {/* SEARCH BAR */}
+            </div>
+          </div>
+          {/* HEADER */} {/* CARDS */}
+          <div className="py-3 px-36 mt-10 flex flex-wrap justify-center">
+            {/* CARD */}
+            <div className="w-64 h-72 m-3 rounded overflow-hidden border cursor-pointer">
+              <img
+                src="https://resizer.otstatic.com/v2/photos/wide-huge/2/31852905.jpg"
+                alt=""
+                className="w-full h-36"
+              />
+              <div className="p-1">
+                <h3 className="font-bold text-2xl mb-2">Milestones Grill</h3>
+                <div className="flex items-start">
+                  <div className="flex mb-2">*****</div>
+                  <p className="ml-2">77 reviews</p>
+                </div>
+                <div className="flex text-reg font-light capitalize">
+                  <p className=" mr-3">Mexican</p>
+                  <p className="mr-3">$$$$</p>
+                  <p>Toronto</p>
+                </div>
+                <p className="text-sm mt-1 font-bold">Booked 3 times today</p>
               </div>
             </div>
-            {/* Rating */}
-            {/* description */}
-            <div className="mt-4">
-              <p className="text-l font-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                laboriosam maiores cum atque obcaecati pariatur totam rem
-                mollitia ut tempora. Commodi enim molestiae hic architecto autem
-                consectetur blanditiis, minus aut.
-              </p>
-            </div>
-            {/* description */}
+            {/* CARD */}
           </div>
-        </section>
-        {/* description area */}
+          {/* CARDS */}
+        </main>
       </main>
     </main>
   )
