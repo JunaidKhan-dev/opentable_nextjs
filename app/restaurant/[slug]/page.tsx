@@ -7,7 +7,7 @@ export default function RestaurantPage(Props: any) {
         {/* NAVBAR */}
         <nav className="bg-white p-2 flex justify-between">
           <Link href="/" className="font-bold text-gray-700 text-2xl">
-            OpenTable{" "}
+            OpenTable
           </Link>
           <div>
             <div className="flex">
@@ -31,14 +31,15 @@ export default function RestaurantPage(Props: any) {
           <div className="bg-white w-[70%] rounded p-3 shadow">
             {/* RESAURANT NAVBAR */}
             <nav className="flex text-reg border-b pb-2">
-              <a href="" className="mr-7">
-                {" "}
-                Overview{" "}
-              </a>
-              <a href="" className="mr-7">
-                {" "}
-                Menu{" "}
-              </a>
+              <Link href={`restaurant/${"milestones-grill"}`} className="mr-7">
+                Overview
+              </Link>
+              <Link
+                href={`restaurant/${"milestones-grill"}/menu`}
+                className="mr-7"
+              >
+                Menu
+              </Link>
             </nav>
             {/* RESAURANT NAVBAR */} {/* TITLE */}
             <div className="mt-4 border-b pb-6">
