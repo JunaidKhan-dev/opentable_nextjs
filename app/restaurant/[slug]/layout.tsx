@@ -2,6 +2,10 @@ import React from "react"
 
 import Header from "@/app/restaurant/components/Header"
 
+export const metadata = {
+  title: "Restaurant Name | OpenTableNext",
+}
+
 function RestaurantLayout({ children }: { children: React.ReactNode }) {
   return (
     <>

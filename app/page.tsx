@@ -4,6 +4,11 @@ import { Inter } from "@next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
 
+// Title
+export const metadata = {
+  title: "OpenTable",
+}
+
 export default function Home(Props: any) {
   return (
     <main>
